@@ -1,7 +1,10 @@
-import express from 'express';
+import dotenv from "dotenv";
+import app from './app'
 
-const app = express();
+dotenv.config()
 
-app.listen(3333,()=>{
-    console.log(`Listening at http://localhost:${3333}`);
+const port = process.env.PORT
+
+app.listen(port,()=>{
+    console.log(`Listening at http://localhost:${port}`);
 })
